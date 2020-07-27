@@ -13,6 +13,7 @@ which allow you to write an asynchronous program as if it were synchronous.
 3. Promises
 
 **#1 What is AJAX?**
+
 AJAX = Asynchronous JavaScript And XML.
 
 AJAX is not a programming language.
