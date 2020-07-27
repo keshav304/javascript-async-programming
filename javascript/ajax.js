@@ -1,4 +1,3 @@
-console.log("Ajax tutorial in one video");
 
 
 let fetchBtn = document.getElementById('fetchBtn');
@@ -24,10 +23,6 @@ function buttonClickHandler() {
     }
 
 
-    // xhr.onreadystatechange = function () {
-    //     console.log('ready state is ', xhr.readyState);
-        
-    // }
 
     // What to do when response is ready
     xhr.onload = function () {
