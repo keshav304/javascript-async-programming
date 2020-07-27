@@ -111,15 +111,25 @@ Parameters
 * If desired operations do not go well then call reject.
 
 ```
-var promise = new Promise(function(resolve, reject) {
-    setTimeout(function() {
-        reject('We are all going to die');
-    }, 2000);
-});
+function func1() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            const error = true;
+            if (!error) {
+                console.log('Function: Your promise has been resolved')
+                resolve();
+            }
+            else {
+                console.log('Function: Your promise has not been resolved')
+                reject('Sorry not fulfilled');
+            }
+        }, 2000);
+    })
+}
 
-promise.then(function success(data) {
-    console.log(data);
-}, function error(data) {
-    console.error(data);
-});
+func1().then(function(){
+    console.log(" Thanks for resolving")
+}).catch(function(error){
+    console.log("the promise is rejected Reason: " + error)
+})
 ```
